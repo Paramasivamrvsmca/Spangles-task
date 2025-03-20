@@ -1,0 +1,174 @@
+/* 🌟 Full Page Centered Register Container */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background: linear-gradient(135deg, #5c67f2, #a46de0);
+}
+
+/* 🌟 Register Box with Glassmorphism Effect */
+.register-box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.register-box:hover {
+    transform: scale(1.02);
+}
+
+/* 🌟 Input Group Styling */
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 15px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+/* 🌟 Enhanced Input Fields */
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.input-group input:focus {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* 🌟 Password Container with Toggle */
+.password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.password-container input {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.toggle-btn {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+    transition: transform 0.2s ease-in-out;
+}
+
+.toggle-btn:hover {
+    transform: scale(1.1);
+}
+
+/* 🌟 Error Message Styling */
+.error-message {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* 🌟 Modern Register Button */
+.register-btn {
+    width: 100%;
+    background: linear-gradient(90deg, #ff758c, #ff7eb3);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.register-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease-in-out;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.register-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.register-btn:hover {
+    background: linear-gradient(90deg, #ff5e99, #ff3e8d);
+    box-shadow: 0 8px 20px rgba(255, 94, 153, 0.4);
+}
+
+.register-btn:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+/* 🌟 Subtle Pulse Effect */
+.register-btn:active {
+    transform: scale(0.98);
+}
+
+/* 🌟 Login Redirect Text */
+.login-text {
+    margin-top: 15px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.login-text a {
+    color: #ff7eb3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+    color: #ff3e8d;
+}
+
+/* 🌟 Responsive Design */
+@media (max-width: 500px) {
+    .register-box {
+        padding: 1.8rem;
+        max-width: 95%;
+    }
+}

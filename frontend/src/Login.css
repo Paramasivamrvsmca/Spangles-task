@@ -1,0 +1,183 @@
+/* 🌟 Full Page Centered Login Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6366f1, #a78bfa);
+    padding: 20px;
+}
+
+/* 🎨 Glassmorphism Login Box */
+.login-box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.login-box:hover {
+    transform: scale(1.02);
+}
+
+/* 🎯 Form Header */
+.login-box h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+/* 🔹 Input Group Styling */
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+    color: #fff;
+}
+
+/* ✨ Enhanced Input Fields */
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.input-group input:focus {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* 🚨 Error Message Styling */
+.error-message {
+    color: #ff4d4d;
+    font-size: 14px;
+    margin-bottom: 10px;
+    background: rgba(255, 77, 77, 0.2);
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* 🚀 Modern Login Button */
+.login-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 💡 Button Hover & Click Effects */
+.login-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease-in-out;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.login-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #ff5e99, #ff3e8d);
+    box-shadow: 0 8px 20px rgba(255, 94, 153, 0.4);
+}
+
+.login-btn:active {
+    transform: scale(0.98);
+}
+
+.login-btn:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+/* 🔗 Register Redirect Text */
+.register-text {
+    margin-top: 15px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.register-text a {
+    color: #ff7eb3;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+    color: #ff3e8d;
+}
+
+/* 🔄 Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🌙 Dark Mode Compatibility */
+@media (prefers-color-scheme: dark) {
+    .login-container {
+        background: linear-gradient(135deg, #1f2937, #374151);
+    }
+    .login-box {
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+    }
+    .input-group label {
+        color: #fff;
+    }
+    .register-text {
+        color: #ccc;
+    }
+}
